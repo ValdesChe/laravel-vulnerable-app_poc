@@ -25,9 +25,6 @@ Auth::routes();
 Route::get('/companies', 'CompanyController@index')->name('companies');
 Route::get('/companies/{company}', 'CompanyController@show');
 
-Route::get('/jobs', 'JobController@index')->name('jobs');
-Route::get('/api/jobs', Api\ListJobs::class);
-
 Route::post('/messages', 'MessageController@store');
 
 Route::post('/documents', 'DocumentController@store');
