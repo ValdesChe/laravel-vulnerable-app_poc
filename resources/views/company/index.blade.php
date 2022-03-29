@@ -18,14 +18,18 @@
                     @foreach($companies as $company)
                         <div class="p-4 flex flex-col max-w-half">
                             <a href="/companies/{{ $company->id }}" class="no-underline text-midnight flex flex-col">
+                            @if($company->filename)
+                                <img class="mb-2" src="/img/placeholder{{ $company->filename }}.jpg" alt="">
+                            @else   
                                 <img class="mb-2" src="/img/placeholder{{ random_int(1,4) }}.jpg" alt="">
+                            @endif
                                 <span class="text-2xl no-underline">{{ $company->name }}</span>
                                 <div class="flex flex-row my-2">
                                     <i class="fas fa-globe-americas"></i>
                                     <span class="pl-2">{{ $company->location }}</span>
                                 </div>
                             </a>
-                        </div>
+                        </div> 
                     @endforeach
                 </div>
             </div>

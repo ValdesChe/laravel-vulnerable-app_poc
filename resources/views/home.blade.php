@@ -20,7 +20,7 @@
 
                 <div class="w-full p-6">
                     <p class="font-bold">
-                        Welcome back {{ $user->name }}!
+                        Bienvenue {{ $user->name }}!
                     </p>
                 </div>
 
@@ -28,8 +28,7 @@
                     <div class="w-full p-6">
                         @if($company->messages()->count())
                             <p class="text-grey-darkest">
-                                Below you see a list of messages ({{ $company->messages->count() }}) your Company has
-                                received from potentially interested developers!
+                                Ci-dessous vous trouverez les reclamations  ({{ $company->messages->count() }}) recus de vos clients !
                             </p>
                             @foreach($company->messages as $msg)
                                 <div class="flex flex-col my-4 p-4">

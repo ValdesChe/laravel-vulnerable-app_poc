@@ -29,15 +29,16 @@
                 </div>
                 <div class="flex-1 text-right">
                     <a class="no-underline hover:underline text-grey-lightest text-sm p-3" href="{{ route('jobs') }}">Jobs</a>
-                    <a
-                            class="no-underline hover:underline text-grey-lightest text-sm p-3"
-                            href="{{ route('companies') }}">Companies</a>
-                    @if(auth() && auth()->user() && auth()->user()->is_admin)
+                    
+                    @if(auth() && auth()->user() && auth()->user()->is_support_func)
                         <a
                                 class="no-underline hover:underline text-grey-lightest text-sm p-3"
                                 href="{{ route('documents') }}">Documents</a>
                     @endif
                     @guest
+                        <a
+                            class="no-underline hover:underline text-grey-lightest text-sm p-3"
+                            href="{{ route('companies') }}">Companies</a>
                         <a
                                 class="no-underline hover:underline text-grey-lightest text-sm p-3"
                                 href="{{ route('login') }}">Login</a>
