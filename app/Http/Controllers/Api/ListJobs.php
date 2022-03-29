@@ -1,5 +1,6 @@
-<?php
 
+<?php
+/*
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
@@ -21,3 +22,5 @@ class ListJobs extends Controller
         return response()->json($jobs);
     }
 }
+
+*/

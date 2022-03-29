@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * App\Company
  *
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Job[] $jobs
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Message[] $messages
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Company newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Company newQuery()
@@ -28,10 +27,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Company extends Model
 {
-    public function jobs()
-    {
-        return $this->hasMany(Job::class);
-    }
 
     public function messages()
     {

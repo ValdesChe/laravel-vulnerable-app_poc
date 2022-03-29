@@ -16,7 +16,7 @@ services:
     ports:
       - 33061:3306
     environment:
-      - "MYSQL_USER=laracon"
-      - "MYSQL_PASSWORD=madrid123"
-      - "MYSQL_DATABASE=laracon_madrid"
-      - "MYSQL_ROOT_PASSWORD=password"
+      - "MYSQL_USER=eaurp"
+      - "MYSQL_PASSWORD=Sup3rPassword^152@"
+      - "MYSQL_DATABASE=eaurp_db"
+      - "MYSQL_ROOT_PASSWORD=@Sup3rPassword@20009"

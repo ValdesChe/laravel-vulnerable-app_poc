@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('company_id')->nullable()->default(null);
             $table->string('password');
             $table->boolean('is_admin')->default(false);
+            $table->boolean('is_support_tech')->default(false); // Support technique EAU BONNE-MERE
+            $table->boolean('is_support_func')->default(false); // Support fonctionnel societe presta
             $table->rememberToken();
             $table->timestamps();
 
