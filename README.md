@@ -49,8 +49,8 @@ By understanding how to exploit _stupid_ mistakes like not validating file uploa
 * Install JS dependencies via yarn/npm, eg `yarn` or `npm install`
 * Build the JS bundle & compile Sass & Tailwind etc via `yarn dev` or `npm run dev`
 * Migrate & seed the database
-    * `docker exec laracon-app php /app/artisan migrate:fresh --seed `
-* If everything went well you should see "Best Laravel Jobs" & a working front-page by navigating to `http://localhost:1234` in your browser
+    * `docker exec eaurp-app php /app/artisan migrate:fresh --seed `
+* If everything went well you should see "Best Laravel Jobs" & a working front-page by navigating to `http://localhost:80` in your browser
     * If you're unsure about modifying your local hosts file, please skip the following option.
     * You can optionally set a hostname by appending eg. `127.0.0.1 laravel-ctf.com` to `/etc/hosts`, and then access the app via `http://laravel-ctf.com:1234`
 * When you're done, `docker-compose down` to stop & remove the containers of this exercise.

@@ -18,7 +18,7 @@ class CreateCompaniesTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('location');
-            $table->string('filename'); // Photo profile 
+            $table->string('filename')->nullable()->default(null); // Photo profile 
             $table->timestamps();
         });
     }

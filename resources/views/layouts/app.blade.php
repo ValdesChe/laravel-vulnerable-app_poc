@@ -28,7 +28,6 @@
                     </a>
                 </div>
                 <div class="flex-1 text-right">
-                    <a class="no-underline hover:underline text-grey-lightest text-sm p-3" href="{{ route('jobs') }}">Jobs</a>
                     
                     @if(auth() && auth()->user() && auth()->user()->is_support_func)
                         <a
@@ -38,10 +37,10 @@
                     @guest
                         <a
                             class="no-underline hover:underline text-grey-lightest text-sm p-3"
-                            href="{{ route('companies') }}">Companies</a>
+                            href="{{ route('companies') }}">Entreprises</a>
                         <a
                                 class="no-underline hover:underline text-grey-lightest text-sm p-3"
-                                href="{{ route('login') }}">Login</a>
+                                href="{{ route('login') }}">Connexion</a>
                     @else
                         <a
                                 href="{{ route('logout') }}"

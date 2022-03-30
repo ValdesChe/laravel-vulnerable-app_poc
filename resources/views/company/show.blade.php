@@ -17,7 +17,7 @@
                 <div class="w-full p-6">
                     <div class="flex flex-row items-center px-6">
                         <i class="far fa-envelope text-2xl mr-2"></i>
-                        <h2>Send Company A Message</h2>
+                        <h2>Envoyez votre message de reclamation à votre fournisseur d'eau</h2>
                     </div>
                     <div>
                         <div class="w-full">
@@ -27,21 +27,21 @@
                                     <label
                                             class="block text-grey-darker text-sm font-bold mb-2 text-charcoal"
                                             for="sender">
-                                        Sender
+                                        Numero Client
                                     </label>
                                     <input
                                             class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-                                            id="sender" name="sender" type="text" placeholder="Write your email here">
+                                            id="sender" name="sender" type="text" placeholder="Ecrire votre IDENTIFIANT (Ex: MARS153666XD0">
                                 </div>
                                 <div class="mb-4">
                                     <label
                                             class="block text-grey-darker text-sm font-bold mb-2 text-charcoal"
                                             for="title">
-                                        Title
+                                        Titre
                                     </label>
                                     <input
                                             class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-                                            id="title" name="title" type="text" placeholder="Title of your message">
+                                            id="title" name="title" type="text" placeholder="Titre de votre message">
                                 </div>
                                 <div class="mb-4">
                                     <label
@@ -51,7 +51,7 @@
                                     </label>
                                     <textarea
                                             class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                                            id="body" name="body" type="text" placeholder="Write your message here">
+                                            id="body" name="body" type="text" placeholder="Entrer votre message ici">
                                     </textarea>
                                     <input type="hidden" name="company_id" value="{{ $company->id }}">
                                 </div>
@@ -68,14 +68,7 @@
                     </div>
 
                     <div class="w-full p-6">
-                        <h2>Open Positions ({{ $company->jobs->count() }})</h2>
-                        @foreach ($company->jobs as $job)
-                            <div class="flex flex-col w-full my-4">
-                                <h3>{{ $job->title }}</h3>
-                                <span>{{ substr($job->description, 0, 150) }}...</span>
-                                <span class="mt-1 font-bold text-sm">Listed: {{ (new DateTime($job->created_at))->format('Y-m-d') }}</span>
-                            </div>
-                        @endforeach
+                        
                     </div>
                 </div>
             </div>

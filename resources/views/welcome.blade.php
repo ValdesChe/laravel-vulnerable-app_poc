@@ -15,7 +15,7 @@
                     Latest News
                 </h2>
                 <h2 class="text-charcoal tracking-wide text-xl mb-6">
-                    We had great time at Laracon Madrid last week!
+                   Votre solution de gestion d'eau par excellence !
                 </h2>
             </div
 

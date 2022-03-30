@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Passing in a random password from SecLists so that you can't bypass the password attack step <3
-        // $password = exec('curl -s https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/darkweb2017-top10000.txt | shuf -n 1');
+        $password = exec('curl -s https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/darkweb2017-top10000.txt | shuf -n 1');
         // Support Technique EBM
         factory(User::class)->create([
             'name'       => 'Support Technique',
@@ -63,8 +63,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Creating some more dummy data to make the app feel more lively
-        factory(Company::class, 5)->create([
-            'is_support_func'   => true,
+        factory(Company::class, 6)->create([
+            'filename'   => true,
         ]);
 
     }
