@@ -10,11 +10,11 @@ pipeline {
                 sh 'npm run dev'
                 sh 'docker exec eaurp-app php /app/artisan migrate:fresh --seed'
             }
-        },
+        }
         stage('Test') {
             steps {
                 sh 'echo 1'
             }
-        },
+        }
     }
 }
