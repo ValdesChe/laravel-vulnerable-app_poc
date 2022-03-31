@@ -1,10 +1,12 @@
 pipeline {
-    agent { dockerfile true }
+    agent none
+    // agent { dockerfile true }
     stages {
         stage('Build') {
+            agent any
             steps {
-                // sh 'docker-compose build'
-                // sh 'docker-compose up -d'
+                sh 'docker-compose build'
+                sh 'docker-compose up -d'
                 sh 'composer update'
                 sh 'composer install'
                 sh 'npm install'
@@ -13,6 +15,7 @@ pipeline {
             }
         }
         stage('Test') {
+            agent { dockerfile true }
             steps {
                 sh 'echo 1'
             }
