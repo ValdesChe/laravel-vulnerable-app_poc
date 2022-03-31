@@ -2,6 +2,9 @@ pipeline {
     agent { dockerfile true }
     stages {
         stage('Build') {
+            node {
+                checkout scm
+            }
             steps {
                 sh 'docker-compose build'
                 sh 'docker-compose up -d'
