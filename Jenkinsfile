@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker-compose build'
-                sh 'docker-compose up -d'
+                // sh 'docker-compose build'
+                // sh 'docker-compose up -d'
                 sh 'composer install'
                 sh 'npm install'
                 sh 'npm run dev'
