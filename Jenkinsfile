@@ -5,6 +5,7 @@ pipeline {
             steps {
                 // sh 'docker-compose build'
                 // sh 'docker-compose up -d'
+                sh 'composer update'
                 sh 'composer install'
                 sh 'npm install'
                 sh 'npm run dev'
