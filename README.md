@@ -44,7 +44,8 @@ By understanding how to exploit _stupid_ mistakes like not validating file uploa
     * This will take while since we're compiling Apache v2.2.20 & php v7.1.29 manually as part of the docker image building process
 * After the image has built successfully, start the app container & db container via running `docker-compose up -d`
     * Tweak exposed ports in `docker-compose.yaml` if ports `1234 && 33601` are already bound on your machine
-* Install php dependencies via `composer install`
+* Install php dependencies via `composer install` or `composer install --ignore-platform-req=ext-dom --ignore-platform-req=ext-dom --ignore-platform-req=ext-dom --ignore-platform-req=ext-dom --ignore-platform-req=ext-dom --ignore-platform-req=ext-xmlwriter --ignore-platform-req=ext-xml --ignore-platform-req=ext-xmlwriter`
+
 * `cp .env.example .env` to create the `.env` file
 * Install JS dependencies via yarn/npm, eg `yarn` or `npm install`
 * Build the JS bundle & compile Sass & Tailwind etc via `yarn dev` or `npm run dev`
