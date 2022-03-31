@@ -23,7 +23,7 @@ RUN tar -xzf /tmp/binaries/php-7.1.29.tar.gz -C /tmp/binaries \
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer    
-RUN apt-get install npm
+RUN apt-get install -Y npm
 
 COPY . /app
 
