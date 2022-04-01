@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             agent any
             steps {
-                sh 'docker-compose build'
-                sh 'docker-compose up -d'
+                sh 'sudo docker-compose build'
+                sh 'sudo docker-compose up -d'
                 sh 'composer update'
                 sh 'composer install'
                 sh 'npm install'
                 sh 'npm run dev'
-                sh 'docker exec eaurp-app php /app/artisan migrate:fresh --seed'
+                sh 'sudo docker exec eaurp-app php /app/artisan migrate:fresh --seed'
             }
         }
         stage('Test') {
