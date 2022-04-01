@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             agent any
             steps {
-                sh 'sudo docker-compose build'
-                sh 'sudo docker-compose up -d'
+                sh 'docker-compose build'
+                sh 'docker-compose up -d'
                 sh 'composer update'
                 sh 'composer install'
                 sh 'npm install'
